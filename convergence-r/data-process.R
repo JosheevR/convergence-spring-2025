@@ -75,7 +75,7 @@ savings_rate <- savings_rate %>%
     cols = -Country.Name,
     names_to = "year",
     names_prefix = "X",
-    values_to = "growth rate"
+    values_to = "savings rate"
   ) %>%
   filter(grepl("^\\d+$", year)) %>%
   mutate(year = as.numeric(year)) %>%
@@ -86,7 +86,7 @@ gross_capital_formation <- gross_capital_formation %>%
     cols = -Country.Name,
     names_to = "year",
     names_prefix = "X",
-    values_to = "growth rate"
+    values_to = "gross capital formation"
   ) %>%
   filter(grepl("^\\d+$", year)) %>%
   mutate(year = as.numeric(year)) %>%
